@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mini E-Commerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 class="title">Mini E-Commerce Store</h1>
+
+<div class="product-container">
+
+    <div class="product" onclick="openProduct('item1')">
+        <img src="images/electronics.jpg" alt="Item 1">
+        <h3>Cool Headphones</h3>
+        <p>$29.99</p>
+    </div>
+
+    <div class="product" onclick="openProduct('item2')">
+        <img src="images/laptop.jpg" alt="Item 2">
+        <h3>Laptop</h3>
+        <p>$199.99</p>
+    </div>
+
+    <div class="product" onclick="openProduct('item3')">
+        <img src="images/watch.jpg" alt="Item 3">
+        <h3>Smartwatch</h3>
+        <p>$49.99</p>
+    </div>
+
+    <div class="product" onclick="openProduct('item4')">
+        <img src="images/shoes.jpg" alt="Item 4">
+        <h3>Shoes</h3>
+        <p>$9.99</p>
+    </div>
+
+    <div class="product" onclick="openProduct('item5')">
+        <img src="images/smatphone.jpg" alt="Item 5">
+        <h3>Smartphone</h3>
+        <p>$69.99</p>
+    </div>
+
+</div>
+
+<script>
+function openProduct(id) {
+    window.location.href = `product.html?item=${id}`;
+}
+</script>
+
+</body>
+</html>

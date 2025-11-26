@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="product-detail">
+
+    <a href="index.html" class="back-btn">⬅ Back</a>
+
+    <img id="product-img" src="" alt="Product Image">
+
+    <h2 id="product-name"></h2>
+    <p id="product-price"></p>
+    <p id="product-desc"></p>
+
+</div>
+
+<script>
+const products = {
+    item1: {
+        name: "Cool Headphones",
+        price: "$29.99",
+        desc: "High-quality headphones with deep bass and noise reduction.",
+        img: "images/electronics.jpg"
+    },
+    item2: {
+        name: "Wireless Mouse",
+        price: "$199.99",
+        desc: "High-performance laptop with fast processing and ample storage.",
+        img: "images/laptop.jpg"
+    },
+    item3: {
+        name: "Smartwatch",
+        price: "$49.99",
+        desc: "Feature-packed smartwatch with fitness tracking and notifications.",
+        img: "images/watch.jpg"
+    },
+
+    item4: {
+        name: "Shoes",
+        price: "$9.99",
+        desc: "Comfortable and stylish shoes for everyday wear.",
+        img: "images/shoes.jpg"
+    },
+
+    item5: {
+        name: "Smartphone",
+        price: "$69.99",
+        desc: "Latest smartphone with cutting-edge features and sleek design.",
+        img: "images/smatphone.jpg"
+    }
+};
+
+const urlParams = new URLSearchParams(window.location.search);
+const item = urlParams.get("item");
+
+document.getElementById("product-name").innerText = products[item].name;
+document.getElementById("product-price").innerText = products[item].price;
+document.getElementById("product-desc").innerText = products[item].desc;
+document.getElementById("product-img").src = products[item].img;
+</script>
+
+</body>
+</html>
